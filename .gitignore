@@ -1,0 +1,21 @@
+# Credentials — never commit
+.env
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Excel output files
+output*.xlsx
+MA_test_output.xlsx
+xbrl_field_compare.xlsx
+xbrl_regnskab.xml
+
+# Temp files
+~$*.xlsx

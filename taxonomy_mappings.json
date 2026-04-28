@@ -1,0 +1,150 @@
+{
+  "namespace_patterns": {
+    "fsa":  "http://xbrl.dcca.dk/fsa",
+    "ifrs": "ifrs"
+  },
+
+  "text_fields": {
+    "fsa": {
+      "ClassOfReportingEntity": "reporting_class"
+    }
+  },
+
+  "fields": {
+    "revenue": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["Revenue"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["RevenueFromContractsWithCustomers", "NetRevenue"]}]}
+    },
+    "gross_profit": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["GrossResult", "GrossProfitLoss"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["GrossProfitLoss", "GrossProfit"]}]}
+    },
+    "ebit": {
+      "fsa":  {"groups": [{"method": "first", "elements": [
+                  "ProfitLossFromOrdinaryOperatingActivities",
+                  "ProfitLossFromOrdinaryOperatingActivitiesBeforeGainsLossesFromFairValueAdjustments"
+              ]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": [
+                  "ProfitLossFromOperatingActivities",
+                  "OperatingProfit"
+              ]}]},
+      "track_source": true
+    },
+    "depreciation": {
+      "fsa": {"groups": [
+        {"method": "first", "elements": [
+            "DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssetsRecognisedInProfitOrLoss",
+            "DepreciationAmortisationExpenseAndImpairmentLossesOfPropertyPlantAndEquipmentAndIntangibleAssets"
+        ]},
+        {"method": "sum", "elements": [
+            "DepreciationAmortisationImpairmentLossesPropertyPlantEquipment",
+            "DepreciationAmortisationImpairmentLossesIntangibleAssets"
+        ]}
+      ]},
+      "ifrs": {"groups": [{"method": "first", "elements": [
+                  "DepreciationAmortisationAndImpairmentLoss",
+                  "DepreciationAndAmortisationExpense"
+              ]}]},
+      "track_source": true
+    },
+    "net_profit": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ProfitLoss"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["ProfitLoss"]}]}
+    },
+    "employees_xbrl": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["AverageNumberOfEmployees"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["AverageNumberOfEmployees"]}]}
+    },
+    "cost_of_sales": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["CostOfSales"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["CostOfSales"]}]}
+    },
+    "other_operating_income": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["OtherOperatingIncome"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["OtherOperatingIncome", "OtherIncome"]}]}
+    },
+    "external_expenses": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ExternalExpenses"]}]}
+    },
+    "employee_benefits": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["EmployeeBenefitsExpense"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["EmployeeBenefitsExpense"]}]}
+    },
+    "wages_salaries": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["WagesAndSalaries"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["WagesAndSalaries"]}]}
+    },
+    "tax_expense": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["TaxExpense"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["IncomeTaxExpenseContinuingOperations"]}]}
+    },
+    "current_tax": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["CurrentTaxExpense"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["CurrentTaxExpense"]}]}
+    },
+    "deferred_tax": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["DeferredTaxExpense"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["DeferredTaxExpense"]}]}
+    },
+    "finance_income": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["OtherFinanceIncome"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["FinanceIncome", "InterestIncome"]}]}
+    },
+    "finance_expenses": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["RestOfOtherFinanceExpenses"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["FinanceCosts", "InterestExpense"]}]}
+    },
+    "profit_before_tax": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ProfitLossFromOrdinaryActivitiesBeforeTax"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["ProfitLossBeforeTax"]}]}
+    },
+    "assets": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["Assets"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["Assets"]}]}
+    },
+    "equity": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["Equity"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["Equity"]}]}
+    },
+    "current_assets": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["CurrentAssets"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["CurrentAssets"]}]}
+    },
+    "noncurrent_assets": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["NoncurrentAssets"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["NoncurrentAssets"]}]}
+    },
+    "cash": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["CashAndCashEquivalents"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["CashAndCashEquivalents"]}]}
+    },
+    "shortterm_receivables": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ShorttermReceivables"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["TradeAndOtherCurrentReceivables"]}]}
+    },
+    "shortterm_liabilities": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ShorttermLiabilitiesOtherThanProvisions"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["CurrentLiabilities"]}]}
+    },
+    "longterm_liabilities": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["LongtermLiabilitiesOtherThanProvisions"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["NoncurrentLiabilities"]}]}
+    },
+    "provisions": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["Provisions"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["Provisions"]}]}
+    },
+    "contributed_capital": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ContributedCapital"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["IssuedCapital"]}]}
+    },
+    "retained_earnings": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["RetainedEarnings"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["RetainedEarnings"]}]}
+    },
+    "proposed_dividend": {
+      "fsa":  {"groups": [{"method": "first", "elements": ["ProposedDividendRecognisedInEquity"]}]},
+      "ifrs": {"groups": [{"method": "first", "elements": ["DividendsProposed"]}]}
+    }
+  }
+}
