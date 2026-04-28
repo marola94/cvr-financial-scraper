@@ -1,6 +1,6 @@
 # CVR Lookup Tool
 
-A desktop application that enriches a list of Danish companies with master data from the Danish Business Authority (Erhvervsstyrelsen) and structured financial KPIs from XBRL annual reports.
+A desktop application that retrieves Danish company data and financial metrics from the Danish Business Authority (Erhvervsstyrelsen) — outputs a structured Excel report with revenue, EBITDA, EBIT trends and balance sheet figures.
 
 ---
 
