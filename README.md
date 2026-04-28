@@ -4,6 +4,15 @@ A desktop application that retrieves Danish company data and financial metrics f
 
 ---
 
+## Download
+
+1. Go to the [Releases page](https://github.com/marola94/cvr-financial-scraper/releases/latest) and download **cvr_lookup.exe**
+2. Download [**.env.example**](https://github.com/marola94/cvr-financial-scraper/blob/main/.env.example), rename it to `.env`, and fill in your credentials
+3. Place `cvr_lookup.exe` and `.env` in the **same folder**
+4. Double-click `cvr_lookup.exe` to launch
+
+---
+
 ## Setup
 
 ### Prerequisites
